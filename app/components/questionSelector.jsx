@@ -38,7 +38,7 @@ export default function QuestionSelector({ topic, onBack }) {
           {questions.map((q, index) => (
             <button
               key={index}
-              className="px-6 py-3 rounded-full shadow-md font-semibold text-[ivory] bg-gradient-to-br from-[#3eabe2] to-[#78c8e3] hover:opacity-90 transition"
+              className="px-6 py-3 rounded-full shadow-xl font-semibold text-[ivory] bg-gradient-to-br from-[#3eabe2] to-[#78c8e3] hover:opacity-90 transition"
               onClick={() => alert(q)} // à remplacer plus tard
             >
               {q}
