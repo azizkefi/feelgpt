@@ -38,3 +38,11 @@ This app serves as a self-service information point for park visitors. Users can
 └── assets/                # Static images or assets
 /styles
 └── globals.css            # Tailwind setup
+```
+
+---
+## 🚀 Getting Started — Installation & Running Locally
+( You need to have Node.Js to run these )
+npm install
+npm run dev
+Go to http://localhost:3000 in your browser to see the kiosk interface.
