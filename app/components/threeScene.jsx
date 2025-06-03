@@ -11,7 +11,6 @@ export default function ThreeScene() {
       <ambientLight intensity={1} />
       <directionalLight position={[2, 2, 2]} />
       <ElephantModel position={[0, 0, 0]} scale={1} />
-      <OrbitControls enablePan={true} enableZoom={true} enableRotate={true}/>
     </Canvas>
   )
 }
