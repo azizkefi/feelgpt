@@ -11,7 +11,7 @@ export default function TopicSelector({ onSelect }) {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center  gap-16">
+    <div className="flex flex-col items-center justify-center  gap-16 mb-24  md:mb-12">
       {/* Heading */}
       <motion.h1
          initial={{ opacity: 0, y: -40 }}
