@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function BannerPlaceholder({ position = 'left', href = '#' }) {
   const sideClass = position === 'left' ? 'left-0' : 'right-0';
-  const imageSrc = position === 'left' ? '/ban1.png' : '/ban2.png';
+  const imageSrc = position === 'left' ? '/ban1.webp' : '/ban2.webp';
 
   return (
     <a

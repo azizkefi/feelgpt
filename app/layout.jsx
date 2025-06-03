@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/nav";
 import BannerPlaceholder from "./components/bannerHolder";
+import MobileFooterBanner from "./components/mobileBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
           
 
         </div>
+        <MobileFooterBanner href="https://www.carthageland.com/" />
       </body>
     </html>
   );
