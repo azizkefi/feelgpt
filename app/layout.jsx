@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
 
         </div>
         <MobileFooterBanner href="https://www.carthageland.com/" />
+        <Cursor />
       </body>
     </html>
   );

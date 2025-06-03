@@ -1,5 +1,9 @@
-import { useState } from 'react';
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
 import { CircleArrowLeft } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Typed from 'typed.js';
 
 const questionsByTopic = {
   general: [
@@ -34,32 +38,67 @@ const answers = {
 export default function QuestionSelector({ topic, onBack }) {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
   const questions = questionsByTopic[topic] || [];
+  const typedRef = useRef(null);
+  const typedInstance = useRef(null);
+
+  useEffect(() => {
+    if (selectedQuestion && typedRef.current) {
+      if (typedInstance.current) {
+        typedInstance.current.destroy();
+      }
+
+      typedInstance.current = new Typed(typedRef.current, {
+        strings: [answers[selectedQuestion]],
+        typeSpeed: 30,
+        showCursor: true,
+      });
+    }
+
+    return () => {
+      if (typedInstance.current) {
+        typedInstance.current.destroy();
+      }
+    };
+  }, [selectedQuestion]);
 
   return (
     <div className="p-4 md:p-8">
-      {/* Back Button */}
       <button onClick={onBack} className="text-[#104585] mb-6">
         <CircleArrowLeft size={40} />
       </button>
 
-      {/* Questions */}
-      <div className="flex flex-col items-center  ">
+      <div className="flex flex-col items-center">
         <div className="flex flex-col gap-6 w-full max-w-3xl">
           {questions.map((q, index) => (
-            <div key={index} className="flex flex-col  gap-6">
-              <button
+            <motion.div
+              key={index}
+              className="flex flex-col gap-6"
+              initial={{ opacity: 0, scale: 0.8, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.4, ease: 'easeOut' }}
+            >
+              <motion.button
                 className="px-6 py-3 rounded-xl shadow-md font-semibold text-[ivory] bg-gradient-to-br text-md md:text-sm from-[#3eabe2] to-[#78c8e3] hover:opacity-90 self-end text-left"
+                whileHover={{
+                  scale: 1.05,
+                  transition: { type: 'spring', stiffness: 300, damping: 15 },
+                }}
                 onClick={() => setSelectedQuestion(q)}
               >
                 {q}
-              </button>
+              </motion.button>
 
               {selectedQuestion === q && (
-                <div className="self-start bg-gray-300 font-semibold text-gray-700 px-4 py-2 rounded-xl max-w-[75%] text-md md:text-sm shadow-md">
-                  {answers[q]}
-                </div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3 }}
+                  className="self-start bg-gray-300 font-semibold text-gray-700 px-4 py-2 rounded-xl max-w-[75%] text-md md:text-sm shadow-md"
+                >
+                  <span ref={typedRef}></span>
+                </motion.div>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
