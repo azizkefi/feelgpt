@@ -12,7 +12,7 @@ export default function BannerPlaceholder({ position = 'left', href = '#' }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`fixed top-0 ${sideClass} w-[160px] h-[1080] z-50 hidden lg:flex`}
+      className={`fixed top-0 ${sideClass} w-[160px] h-screen z-50 hidden lg:flex`}
     >
       <Image
         width={160}
