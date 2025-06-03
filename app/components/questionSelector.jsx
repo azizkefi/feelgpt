@@ -48,14 +48,14 @@ export default function QuestionSelector({ topic, onBack }) {
           {questions.map((q, index) => (
             <div key={index} className="flex flex-col  gap-6">
               <button
-                className="px-6 py-3 rounded-xl shadow-md font-semibold text-[ivory] bg-gradient-to-br text-sm from-[#3eabe2] to-[#78c8e3] hover:opacity-90 self-end text-left"
+                className="px-6 py-3 rounded-xl shadow-md font-semibold text-[ivory] bg-gradient-to-br text-md md:text-sm from-[#3eabe2] to-[#78c8e3] hover:opacity-90 self-end text-left"
                 onClick={() => setSelectedQuestion(q)}
               >
                 {q}
               </button>
 
               {selectedQuestion === q && (
-                <div className="self-start bg-gray-300 font-semibold text-gray-700 px-4 py-2 rounded-xl max-w-[75%] text-sm shadow-md">
+                <div className="self-start bg-gray-300 font-semibold text-gray-700 px-4 py-2 rounded-xl max-w-[75%] text-md md:text-sm shadow-md">
                   {answers[q]}
                 </div>
               )}
