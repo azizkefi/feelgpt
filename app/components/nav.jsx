@@ -11,6 +11,7 @@ export default function Navbar() {
         width={180}
         height={180}
         priority
+        className='z-50'
       />
     </nav>
   );
