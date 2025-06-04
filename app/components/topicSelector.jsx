@@ -31,7 +31,7 @@ export default function TopicSelector({ onSelect }) {
   }, []);
 
   return (
-    <div className="flex flex-col mt-8 lg:mt-0 items-center justify-center gap-8">
+    <div className="flex flex-col mt-4 lg:mt-0 items-center justify-center gap-4">
       {/* Desktop static heading */}
       <motion.h1
         initial={{ opacity: 0 }}
