@@ -8,7 +8,7 @@ export default function MobileFooterBanner({ href = '#' }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-0 left-0 w-full  h-[114] bg-white z-50 flex items-center justify-center shadow-md lg:hidden"
+      className="fixed bottom-0 left-0 w-full  h-[80] bg-white z-50 flex items-center justify-center shadow-md lg:hidden"
     >
       <Image
         src="/b-mobile.webp" // your actual image

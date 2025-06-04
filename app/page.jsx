@@ -9,16 +9,16 @@ export default function Home() {
   const [selectedTopic, setSelectedTopic] = useState(null)
 
   return (
-    <div className="relative  ">
+    <div className="relative">
       {/* 🧠 Background 3D */}
-      <div className="absolute top-72 right-18 w-full h-96 z-20 pointer-events-none overflow-hidden">
+      <div className="absolute top-72 right-18 lg:right-64 w-full h-96 z-20 pointer-events-none overflow-hidden">
         <ThreeScene />
       </div>
 
       {/* 🧾 Foreground Content */}
-      <div className="relative z-40 mt-8 ">
+      <div className=" z-40 mt-8 px-4 lg:px-8 max-w-4xl mx-auto w-full">
         {!selectedTopic ? (
-          <div className="  flex items-center justify-center pointer-events-auto">
+          <div className="flex items-center justify-center pointer-events-auto">
             <TopicSelector onSelect={setSelectedTopic} />
           </div>
         ) : (

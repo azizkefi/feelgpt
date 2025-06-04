@@ -93,7 +93,7 @@ export default function QuestionSelector({ topic, onBack }) {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3 }}
-                  className="self-start bg-gray-300 font-semibold text-gray-700 px-4 py-2 rounded-xl max-w-[75%] text-md md:text-sm shadow-md"
+                  className="self-start bg-gray-100 border-gray-100 font-semibold text-gray-600 px-4 py-2 rounded-xl max-w-[75%] text-md md:text-sm shadow-md"
                 >
                   <span ref={typedRef}></span>
                 </motion.div>
