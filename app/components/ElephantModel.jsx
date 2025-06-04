@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
-import { useGLTF, useAnimations ,} from '@react-three/drei'
+import { useGLTF, useAnimations } from '@react-three/drei'
 
 export default function ElephantModel(props) {
   const group = useRef()

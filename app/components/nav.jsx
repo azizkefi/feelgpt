@@ -8,8 +8,8 @@ export default function Navbar() {
       <Image
         src="/gpt.png"
         alt="Logo"
-        width={240}
-        height={240}
+        width={180}
+        height={180}
         priority
       />
     </nav>

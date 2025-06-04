@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { CircleArrowLeft } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Typed from 'typed.js';
 
@@ -64,7 +64,7 @@ export default function QuestionSelector({ topic, onBack }) {
   return (
     <div className="p-4 md:p-8">
       <button onClick={onBack} className="text-[#104585] mb-6">
-        <CircleArrowLeft size={40} />
+     <ChevronLeft size={40} />
       </button>
 
       <div className="flex flex-col items-center">
