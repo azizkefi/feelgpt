@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import MobileFooterBanner from './mobileBanner';
 
 export default function TopicSelector({ onSelect }) {
   const buttons = [
@@ -89,6 +90,7 @@ export default function TopicSelector({ onSelect }) {
       >
         <span ref={typedRef} />
       </motion.h1>
+        <MobileFooterBanner href="https://www.carthageland.com/" />
     </div>
   );
 }
