@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="relative">
       {/* 🧠 Background 3D */}
-      <div className="absolute top-56 right-18 lg:right-64 w-full h-96 z-20 pointer-events-none overflow-hidden">
+      <div className="absolute top-64 right-18 lg:right-64 w-full h-96 z-20 pointer-events-none overflow-hidden">
         <ThreeScene />
       </div>
 
