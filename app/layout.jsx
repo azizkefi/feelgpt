@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         <BannerPlaceholder position="left" href="https://www.carthageland.com/" />
         <BannerPlaceholder position="right" href="https://www.carthageland.com/" />
         {/* Contenu principal */}
-        <div className="mx-auto max-w-screen-2xl px-4">{children}
+        <div className=" max-w-screen-2xl ">{children}
           
 
         </div>
