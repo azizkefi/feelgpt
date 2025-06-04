@@ -90,7 +90,7 @@ export default function TopicSelector({ onSelect }) {
       >
         <span ref={typedRef} />
       </motion.h1>
-        <MobileFooterBanner href="https://www.carthageland.com/" />
+      
     </div>
   );
 }
