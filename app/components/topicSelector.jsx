@@ -74,7 +74,7 @@ export default function TopicSelector({ onSelect }) {
                 damping: 10,
               },
             }}
-            className="w-full px-6 py-3 rounded-full shadow-xl font-semibold text-[ivory] bg-gradient-to-br from-[#3eabe2] to-[#78c8e3] hover:opacity-95 transition-transform"
+          className="w-full px-6 py-3 rounded-full shadow-xl font-semibold text-[ivory] bg-gradient-to-br from-[#A2352A] to-[#D75C4C] hover:opacity-95 transition-transform"
           >
             {btn.label}
           </motion.button>
@@ -86,7 +86,7 @@ export default function TopicSelector({ onSelect }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, ease: 'linear' }}
-        className="text-xl border-2 shadow-md bg-gray-100 border-gray-100 rounded-xl p-4 text-gray-600 font-bold text-center lg:hidden"
+        className="text-lg border-2 shadow-sm  border-[#A2352A] rounded-3xl p-4 text-[#A2352A] shadow-[#A2352A] font-bold text-center lg:hidden"
       >
         <span ref={typedRef} />
       </motion.h1>

@@ -63,7 +63,7 @@ export default function QuestionSelector({ topic, onBack }) {
 
   return (
     <div className="p-4 md:p-8">
-      <button onClick={onBack} className="text-[#104585] mb-6">
+      <button onClick={onBack} className="text-[#A2352A] mb-6">
      <ChevronLeft size={40} />
       </button>
 
@@ -78,7 +78,7 @@ export default function QuestionSelector({ topic, onBack }) {
               transition={{ delay: index * 0.1, duration: 0.4, ease: 'easeOut' }}
             >
               <motion.button
-                className="px-6 py-3 rounded-xl shadow-md font-semibold text-[ivory] bg-gradient-to-br text-md md:text-sm from-[#3eabe2] to-[#78c8e3] hover:opacity-90 self-end text-left"
+                className="px-6 py-3 rounded-xl shadow-md font-semibold text-[ivory]  text-md md:text-sm bg-gradient-to-br from-[#A2352A] to-[#D75C4C] hover:opacity-90 self-end text-left"
                 whileHover={{
                   scale: 1.05,
                   transition: { type: 'spring', stiffness: 300, damping: 15 },
