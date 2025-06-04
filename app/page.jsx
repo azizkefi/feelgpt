@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       {/* 🧾 Foreground Content */}
-      <div className=" z-50 mt-4 px-4 lg:px-8 max-w-4xl mx-auto w-full">
+      <div className="  mt-4 px-4 lg:px-8 max-w-4xl mx-auto w-full">
         {!selectedTopic ? (
           <div className="flex items-center justify-center pointer-events-auto">
             <TopicSelector onSelect={setSelectedTopic} />
