@@ -11,12 +11,12 @@ export default function Home() {
   return (
     <div className="relative">
       {/* 🧠 Background 3D */}
-      <div className="absolute top-64 right-18 lg:right-64 w-full h-96 z-20 pointer-events-none overflow-hidden">
+      <div className="absolute top-64 right-18 lg:right-64 w-full h-96 -z-10 pointer-events-none overflow-hidden">
         <ThreeScene />
       </div>
 
       {/* 🧾 Foreground Content */}
-      <div className=" z-40 mt-4 px-4 lg:px-8 max-w-4xl mx-auto w-full">
+      <div className=" z-50 mt-4 px-4 lg:px-8 max-w-4xl mx-auto w-full">
         {!selectedTopic ? (
           <div className="flex items-center justify-center pointer-events-auto">
             <TopicSelector onSelect={setSelectedTopic} />
