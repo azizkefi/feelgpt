@@ -1,26 +1,33 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
+import { useGLTF, useFBX, useAnimations } from '@react-three/drei'
 
 export default function ElephantModel(props) {
   const group = useRef()
 
-  // Load the animated elephant (model + animation already baked)
-  const { scene, animations } = useGLTF('/models/HappyElephant.glb')
-  const { actions } = useAnimations(animations, group)
+  // 1. Load the rigged T-pose elephant (GLB)
+  const { scene: elephantScene } = useGLTF('/models/Tposelephant.glb')
+
+  // 2. Load the Happy.fbx animation (no mesh, just bones)
+  const happyFBX = useFBX('/animations/Happy.fbx')
+
+  // 3. Attach animation from FBX onto the elephant model
+  const { actions, mixer } = useAnimations(happyFBX.animations, group)
 
   useEffect(() => {
-    scene.traverse(obj => {
-      obj.frustumCulled = false // avoid disappearing when off-screen
+    // Disable frustum culling so it doesn’t disappear off-screen
+    elephantScene.traverse((obj) => {
+      obj.frustumCulled = false
     })
 
-    // Play the first animation
+    // Play the first animation from FBX
     if (actions && Object.keys(actions).length > 0) {
       const firstAction = actions[Object.keys(actions)[0]]
       firstAction.reset().play()
     }
-  }, [actions, scene])
+  }, [actions, elephantScene])
 
-  return <primitive ref={group} object={scene} {...props} />
+  // Set the GLB elephant as the scene
+  return <primitive ref={group} object={elephantScene} {...props} />
 }
