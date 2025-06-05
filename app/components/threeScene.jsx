@@ -11,7 +11,7 @@ export default function ThreeScene() {
       <directionalLight position={[2, 2, 2]} />
 
       <ElephantModel
-        position={[0.2, -4.3, 0.4]}
+        position={[0.2, -3.8, 0.4]}
         scale={2.3}
         rotation={[-1.22, 0, 0.3]}
       />
