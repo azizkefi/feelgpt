@@ -62,12 +62,10 @@ export default function QuestionSelector({ topic, onBack }) {
   }, [selectedQuestion]);
 
   return (
-    <div className="p-4 md:p-8">
-      <button onClick={onBack} className="text-[#A2352A] mb-6">
-     <ChevronLeft size={40} />
-      </button>
-
-      <div className="flex flex-col items-center">
+ 
+      <><button onClick={onBack} className="text-[#A2352A] mb-6">
+      <ChevronLeft size={40} />
+    </button><div className="flex flex-col items-center">
         <div className="flex flex-col gap-6 w-full max-w-3xl">
           {questions.map((q, index) => (
             <motion.div
@@ -101,7 +99,7 @@ export default function QuestionSelector({ topic, onBack }) {
             </motion.div>
           ))}
         </div>
-      </div>
-    </div>
+      </div></>
+    
   );
 }
