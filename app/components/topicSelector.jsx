@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
-import MobileFooterBanner from './mobileBanner';
 
 export default function TopicSelector({ onSelect }) {
   const buttons = [
@@ -32,19 +31,12 @@ export default function TopicSelector({ onSelect }) {
   }, []);
 
   return (
-    <div className="flex flex-col mt-4 lg:mt-0 items-center justify-center gap-4">
+    <div className="flex flex-col mt-4 lg:mt-12 items-center justify-center gap-4 lg:gap-24">
       {/* Desktop static heading */}
-      <motion.h1
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2, ease: 'linear' }}
-        className="text-3xl p-4 text-gray-600 font-bold text-center hidden lg:block"
-      >
-        Ahla bik, fesh najem n3awnek?
-      </motion.h1>
+     
 
       {/* Buttons with responsive grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 w-full max-w-[600px] lg:max-w-5xl px-4">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 w-full max-w-[600px] lg:max-w-7xl p-2">
         {buttons.map((btn, i) => (
           <motion.button
             key={btn.value}
@@ -86,7 +78,7 @@ export default function TopicSelector({ onSelect }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, ease: 'linear' }}
-        className="text-lg border-2 shadow-sm  border-[#A2352A] rounded-3xl p-4 text-[#A2352A] shadow-[#A2352A] font-bold text-center lg:hidden"
+        className="text-lg lg:text-2xl border-2 lg:border-3 shadow-sm   border-[#350f10] rounded-3xl p-4 text-[#350f10] shadow-[#350f10] font-bold text-center "
       >
         <span ref={typedRef} />
       </motion.h1>
