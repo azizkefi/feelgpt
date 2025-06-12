@@ -36,7 +36,7 @@ export default function TopicSelector({ onSelect }) {
   }, []);
 
   return (
-    <div className="flex flex-col mt-4 lg:mt-12 items-center justify-center gap-12 lg:gap-24">
+    <div className="flex flex-col mt-4 lg:mt-12 items-center justify-center gap-24">
       {/* Desktop static heading */}
      
 
