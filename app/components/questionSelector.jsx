@@ -52,32 +52,91 @@ const questionsByTopic = {
 };
 
 const answers = {
-  "Quels sont les horaires d'ouverture ?": "Le parc est ouvert de 9h à 18h tous les jours.",
-  "Y a-t-il un parking ?": "Oui, un parking gratuit est disponible à l'entrée.",
-  "Quelles sont les règles d'hygiène ?": "Merci de respecter les consignes affichées et d'utiliser les bornes de gel.",
-  "Y a-t-il des fontaines d'eau ?": "Oui, des fontaines sont disponibles près des zones de restauration.",
-  "Où se trouve la zone enfants ?": "Elle est située à gauche après l'entrée principale.",
-  "Comment accéder à la sortie ?": "Suivez les panneaux 'Sortie' ou demandez au personnel.",
-  "Comment faire une suggestion ?": "Un formulaire est disponible à la sortie du parc.",
-  "Puis-je proposer une animation ?": "Oui, via notre site web ou directement à l'accueil.",
-  "Y a-t-il des accès pour personnes à mobilité réduite ?": "Oui, le parc est accessible aux personnes à mobilité réduite.",
-  "Les animaux sont-ils autorisés ?": "Seuls les chiens guides sont autorisés dans le parc.",
-  "Quels types de restauration sont disponibles ?": "Vous trouverez des restaurants, snacks et aires de pique-nique dans le parc.",
-  "Peut-on pique-niquer dans le parc ?": "Oui, des espaces dédiés au pique-nique sont prévus.",
-  "Comment réserver pour un groupe ?": "Veuillez contacter notre service groupes via le site ou à l'accueil.",
-  "Y a-t-il des événements spéciaux ?": "Des événements sont organisés régulièrement, consultez notre site pour le programme.",
-  "Où sont les toilettes ?": "Les toilettes sont situées à plusieurs endroits, près des entrées et des aires de restauration.",
-  "Y a-t-il des espaces de repos ?": "Oui, des bancs et espaces ombragés sont à votre disposition dans tout le parc.",
-  "Quels moyens de paiement sont acceptés ?": "Nous acceptons espèces, cartes bancaires et paiements mobiles.",
-  "Peut-on acheter des billets en ligne ?": "Oui, l'achat de billets en ligne est possible sur notre site officiel.",
-  "Quelles animations sont proposées aujourd'hui ?": "Consultez le programme du jour affiché à l'entrée ou sur notre site.",
-  "Faut-il réserver pour les spectacles ?": "La plupart des spectacles sont en accès libre, certains nécessitent une réservation.",
-  "Comment faire une réclamation ?": "Rendez-vous à l'accueil ou remplissez le formulaire en ligne pour toute réclamation.",
-  "Quel est le délai de traitement des réclamations ?": "Les réclamations sont traitées sous 48h ouvrées.",
-  "Comment contacter le service client ?": "Vous pouvez nous joindre par téléphone, email ou à l'accueil du parc.",
-  "Où se trouve le bureau d'information ?": "Le bureau d'information est situé à droite après l'entrée principale.",
-  "Où acheter des souvenirs ?": "La boutique de souvenirs se trouve près de la sortie du parc.",
-  "Peut-on prendre des photos dans le parc ?": "Oui, la prise de photos est autorisée sauf indication contraire sur certains espaces."
+  // 🏞️ GENERAL
+  "Quels sont les horaires d’ouverture des parcs ?":
+    "Les parcs sont ouverts tous les jours de 10h à 20h ! 🎢 Les horaires peuvent parfois changer, alors jette un coup d’œil à notre page Facebook ou appelle-nous avant de venir, juste pour être sûr.",
+  
+  "Quels sont les meilleurs jours pour visiter ?":
+    "Si tu veux éviter la foule et profiter à fond, viens en semaine (du lundi au jeudi) ! Les weekends, c’est plutôt ambiance fête foraine géante 😄",
+  
+  "Peut-on sortir du parc et revenir plus tard ?":
+    "Oh non... la sortie, c’est comme un toboggan : une fois que t’es descendu, tu peux pas remonter sans un nouveau billet 🎟️",
+  
+  "Où sont situés les parcs ?":
+    "On a deux royaumes magiques ! ✨ Carthage Land Hammamet est à Yasmine Hammamet, et Carthage Land Tunis est aux Berges du Lac, à Tunis.",
+  
+  "Comment puis-je acheter des billets ?":
+    "Tu peux les acheter en ligne (pratique !) sur nos sites officiels ou directement sur place au guichet. Clique, clique, et amuse-toi ! 🧾",
+  
+  "Y a-t-il des réductions ou des offres spéciales ?":
+    "Oh oui ! Groupes, familles ou événements spéciaux... on adore faire plaisir 🎁 Vérifie notre page Facebook ou appelle-nous pour découvrir nos offres du moment.",
+  
+  "Y a-t-il un photographe dans le parc ?":
+    "Oui, tu pourrais bien croiser notre photographe en mission spéciale 📸 Il est là pour capturer tes plus beaux sourires ! Les photos peuvent être achetées en souvenir."
+  
+  // 🧒 ACCESS
+  , "Les enfants doivent-ils être accompagnés ?":
+    "Oui, les petits aventuriers de moins de 14 ans doivent venir avec un grand (un adulte de plus de 18 ans). Ensemble, c’est plus rigolo et surtout plus sûr ! 👨‍👧",
+
+  "Y a-t-il des aires de jeux ou attractions adaptées aux petits enfants ?":
+    "Bien sûr ! Des zones rien que pour les bouts de chou : Ali Baba, Maya Kids ou encore Cinema Kids. C’est tout doux, tout rigolo 🧸",
+
+  "Y a-t-il des restrictions de taille ou de santé pour certaines attractions ?":
+    "Eh oui, certaines attractions ont leurs petites règles : taille, santé, conditions physiques… Tout ça pour que tout le monde reste en sécurité. 🎡",
+
+  "Y a-t-il un service médical sur place ?":
+    "Pas de panique ! Une infirmerie est là si quelqu’un se blesse ou se sent patraque. On prend soin de nos visiteurs 🩺",
+
+  // 🍔 RESTAURATION
+  "Y a-t-il des restaurants ou snacks dans le parc ?":
+    "Oh oui ! Plusieurs stands de délices t’attendent pour recharger les batteries. Crêpes, burgers, glaces… miam 😋",
+
+  "Peut-on apporter son propre pique-nique ?":
+    "Hélas non... Pour des raisons d’hygiène (et éviter les fourmis dans les sacs), la nourriture extérieure est interdite. Mais nos snacks sont là pour ça 🍟",
+
+  // 🎉 EVENTS
+  "Peut-on organiser un anniversaire ou un événement privé à Carthage Land ?":
+    "Absolument ! Un anniversaire dans un parc, c’est la fête assurée 🥳 Team building ou sortie scolaire ? On gère aussi. Contacte notre équipe et on te prépare un moment magique !",
+
+  "Y a-t-il des spectacles ou animations ?":
+    "Oui ! Danse, acrobaties, parades… il se passe toujours quelque chose d’incroyable. Garde les yeux et les oreilles ouverts 🎭",
+
+  "Où peut-on consulter le programme des animations ?":
+    "Tu peux le voir affiché à l’entrée du parc ou le retrouver sur notre page Facebook. Et hop, direction le fun ! 🎉",
+
+  // 🪑 CONFORT
+  "Y a-t-il des zones d’ombre ou des espaces pour se reposer ?":
+    "Oui, des bancs confortables t’attendent à l’ombre pour une petite pause bien méritée. Repose-toi avant de repartir à l’aventure 🌳",
+
+  "Y a-t-il une salle pour changer les bébés ?":
+    "Oui, les tout-petits ont aussi leur espace rien que pour eux, avec tables à langer dans les sanitaires 👶",
+
+  "Y a-t-il des exigences vestimentaires ?":
+    "Une tenue décente est souhaitée. Pour les zones aquatiques, maillot ou burkini sont obligatoires. Pas de pyjamas Spiderman, désolé 😅",
+
+  "Peut-on venir en sandales ou en tongs ?":
+    "Oui, mais pour certaines attractions un peu plus sportives, des chaussures fermées sont recommandées 👟",
+
+  // 💳 PAYMENT
+  "Le parc accepte-t-il les cartes bancaires ?":
+    "Oui, la plupart des points de vente acceptent les cartes. Pas besoin de venir avec une bourse en cuir médiéval 💳",
+
+  "Y a-t-il un distributeur automatique de billets ?":
+    "Oui ! Un distributeur est disponible près du parc, au cas où tu aurais oublié ton trésor 🏦",
+
+  // 🛑 RECLAMATIONS
+  "Que faire si un enfant se perd dans le parc ?":
+    "Préviens tout de suite un membre du personnel ! Et pssst… note ton numéro sur un bracelet ou un papier dans la poche de ton enfant, ça aide beaucoup 👦📞",
+
+  "Qui contacter en cas de réclamation ?":
+    "Tu peux nous contacter via le site web, par téléphone, ou te rendre directement au service client dans le parc. On est là pour t’écouter 🧾",
+
+  // ☎️ CONTACTS
+  "Comment contacter Carthage Land Hammamet ?":
+    "Téléphone : (+216) 72 240 111 📞 — Email : reception.carthagelandh@carthageland.com.tn. Et hop, à ton service !",
+
+  "Comment contacter Carthage Land Tunis ?":
+    "Téléphone : (+216) 70 020 820 📞 — Email : sales@carthagelandtunis.com.tn. À très vite !"
 };
 
 export default function QuestionSelector({ topic, onBack }) {
