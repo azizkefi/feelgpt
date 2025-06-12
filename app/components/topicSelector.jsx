@@ -12,10 +12,9 @@ export default function TopicSelector({ onSelect }) {
     { label: 'Groupes & Événements', value: 'events' },
     { label: 'Services pratiques & confort', value: 'confort' },
     { label: 'Paiements & services financiers', value: 'payment' },
-    { label: 'Animations & spectacles', value: 'animations' },
     { label: 'Reclamation', value: 'reclamations'},
     { label: 'Contact Us', value: 'contacts'},
-    { label: 'Photos & souvenirs', value: 'souvenirs'},
+
   ];
 
   const typedRef = useRef(null);
