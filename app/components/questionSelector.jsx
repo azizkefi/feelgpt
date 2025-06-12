@@ -129,7 +129,7 @@ const answers = {
     "Pas de panique ! Préviens vite un membre du personnel. Et petit conseil malin : écris ton numéro sur un bracelet ou un papier dans la poche de ton enfant, au cas où 👦📞",
 
   "Qui contacter en cas de réclamation ?":
-    "Tu peux nous parler directement à l’accueil ou passer par notre site ou par téléphone. On est là pour t’écouter et trouver une solution 💌",
+  "Tu peux nous parler directement à l’accueil ou passer par notre site ou par téléphone. On est là pour t’écouter et trouver une solution 💌",
 
   // ☎️ CONTACTS
   "Comment contacter Carthage Land Hammamet ?":
