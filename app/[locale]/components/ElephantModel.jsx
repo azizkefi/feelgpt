@@ -16,7 +16,7 @@ export default function ElephantModel(props) {
   const { actions, mixer } = useAnimations(happyFBX.animations, group)
 
   useEffect(() => {
-    // Disable frustum culling so it doesn’t disappear off-screen
+    // Disable frustum culling so it doesn't disappear off-screen
     elephantScene.traverse((obj) => {
       obj.frustumCulled = false
     })
