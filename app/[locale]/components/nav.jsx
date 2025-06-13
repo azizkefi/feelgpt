@@ -7,7 +7,8 @@ import ReactCountryFlag from "react-country-flag";
 
 const countryCodes = {
   en: 'GB',
-  fr: 'FR'
+  fr: 'FR',
+  ar: 'TN'
 };
 
 export default function Navbar() {
@@ -44,7 +45,7 @@ export default function Navbar() {
               key={locale}
               onClick={() => handleLanguageChange(locale)}
               className={`hover:scale-110 transition-transform ${
-                currentLocale === locale ? 'scale-110 border-3  rounded' : ''
+                currentLocale === locale ? 'scale-110 border-3 border-[#350f10] rounded' : ''
               }`}
               title={`Switch to ${locale.toUpperCase()}`}
             >
@@ -52,8 +53,8 @@ export default function Navbar() {
                 countryCode={countryCodes[locale]}
                 svg
                 style={{
-                  width: '28px',
-                  height: '24px',
+                  width: '20px',
+                  height: '20px',
                 }}
                 title={locale.toUpperCase()}
               />

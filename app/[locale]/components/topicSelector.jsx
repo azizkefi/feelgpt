@@ -38,7 +38,7 @@ export default function TopicSelector({ onSelect }) {
   }, [t]); // re-run if locale changes
 
   return (
-    <div className="flex flex-col mt-4 lg:mt-12 items-center justify-center gap-24">
+    <div className="flex flex-col mt-4 lg:mt-12 items-center justify-center gap-12 lg:gap-24">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-[600px] lg:max-w-7xl">
         {buttons.map((btn, i) => (
           <motion.button
