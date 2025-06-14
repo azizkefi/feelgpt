@@ -27,7 +27,7 @@ export default function TopicSelector({ onSelect }) {
       typedInstance.current = new Typed(typedRef.current, {
         strings: [t('typed.welcome')], // Dynamically use translated string
         typeSpeed: 30,
-        startDelay: 1200,
+        startDelay: 1500,
         showCursor: true,
       });
     }
@@ -80,7 +80,7 @@ export default function TopicSelector({ onSelect }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, ease: 'linear' }}
-        className="text-md lg:text-2xl border-2 lg:border-3 shadow-sm border-[#350f10] rounded-xl p-3 text-[#350f10] shadow-[#350f10] font-bold text-center"
+        className="text-md lg:text-3xl   rounded-xl p-3 text-[#350f10]  font-bold text-center"
       >
         <span ref={typedRef} />
       </motion.h1>

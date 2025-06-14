@@ -21,7 +21,7 @@ export default function QuestionSelector({ topic, onBack }) {
 
       typedInstance.current = new Typed(typedRef.current, {
         strings: [t.raw('answers')[selectedQuestion]],
-        typeSpeed: 30,
+        typeSpeed: 20,
         showCursor: true,
       });
     }
